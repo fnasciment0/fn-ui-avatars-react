@@ -17,15 +17,13 @@ export const Avatar: React.FC<AvatarProps> = ({
 	alt,
 	...rest
 }) => {
-	const url = getAvatarUrl(name, {
-		size,
-		fontSize,
-		length,
-		rounded,
-		color,
-		format,
-		baseUrl,
-	});
+    const rawOptions = { size, fontSize, length, rounded, color, format, baseUrl };
+
+    const cleanOptions = Object.fromEntries(
+        Object.entries(rawOptions).filter(([_, value]) => value !== undefined)
+    ) as AvatarOptions;
+
+	const url = getAvatarUrl(name, cleanOptions);
 
 	return (
 		<img
