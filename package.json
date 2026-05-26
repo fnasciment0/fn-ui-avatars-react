@@ -1,0 +1,41 @@
+{
+  "name": "fn-ui-avatars-react",
+  "version": "1.0.0",
+  "description": "A lightweight React component for fn-ui-avatars",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --format cjs,esm --dts --external react",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "avatar",
+    "ui-avatars",
+    "initials",
+    "gravatar",
+    "user-avatar",
+    "component",
+    "fn-ui-avatars"
+  ],
+  "author": "Fábio Nascimento <f_nascimento9@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fnasciment0/fn-ui-avatars-react.git"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "fn-ui-avatars": "^1.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.15",
+    "react": "^19.2.6",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
