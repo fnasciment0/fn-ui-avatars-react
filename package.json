@@ -1,6 +1,6 @@
 {
   "name": "fn-ui-avatars-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight React component for fn-ui-avatars",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
