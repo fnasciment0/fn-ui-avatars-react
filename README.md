@@ -8,6 +8,11 @@ A lightweight, zero-dependency React wrapper for [fn-ui-avatars](https://www.npm
 
 Automatically generate consistent, colorful initials avatars using the [UI-Avatars](https://ui-avatars.com/) API. Colors are **deterministic** (the same name always produces the same background color) and it features **Smart Contrast** to automatically switch text color between black and white for maximum legibility.
 
+> **✨ Live Demo:** [Try the interactive generator here!](https://fn-ui-avatars-docs.vercel.app/)
+
+> **🔧 Looking for the Vanilla JS / Core version?**
+> Check out the framework-agnostic base package: [**fn-ui-avatars**](https://github.com/fnasciment0/fn-ui-avatars) (or find it on [npm](https://www.npmjs.com/package/fn-ui-avatars)).
+
 ---
 
 ## 📦 Installation
