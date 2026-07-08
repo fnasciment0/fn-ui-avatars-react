@@ -46,6 +46,12 @@ export default function App() {
         rounded={false} 
         color="ff0000" // Custom text color (hex without #)
       />
+
+      {/* With a custom curated palette */}
+      <Avatar 
+        name="Alice Wonder" 
+        palette={['#F87171', '#FCD34D', '#10B981', '#4A7BCC']} 
+      />
       
       {/* Works seamlessly with Tailwind CSS or standard classes */}
       <Avatar 
@@ -72,7 +78,8 @@ The `Avatar` component accepts all native `<img>` HTML attributes, plus the foll
 | `fontSize` | `number` | `0.33` | Font size ratio (`0.1` – `1`). |
 | `length` | `number` | `2` | Number of initials to display. |
 | `rounded` | `boolean` | `true` | Renders a circular avatar if `true`, square if `false`. |
-| `color` | `string` | `'fff'` | Text color (hex without `#`). Automatically calculates best contrast ('fff' or '000') unless overridden. |
+| `color` | `string` | `'fff'` | Custom text color (hex with or without #). Overrides the default Smart Contrast. |
+| `palette` | `string[]` | `[]` | Array of custom hex colors to be used as the background. If provided, the algorithm will deterministically pick from this list instead of the full hex space. |
 | `format` | `'svg' \| 'png'` | `'svg'` | The image format returned by the API. |
 | `baseUrl` | `string` | `'https://ui-avatars.com/api/'` | Custom API base URL if you are hosting your own instance. |
 
@@ -84,9 +91,9 @@ Under the hood, it uses the core [fn-ui-avatars](https://www.npmjs.com/package/f
 
 - The name is hashed using a djb2-style algorithm.
 
-- The numeric hash is converted into a deterministic 6-digit hex color.
+- The numeric hash is converted into a deterministic 6-digit hex color. If a palette is provided, the hash is instead mapped to one of the colors in your curated array using a modulo operation.
 
-- The relative YIQ luminance of the background is calculated to output either white or black text for optimal accessibility.
+- The relative YIQ luminance of the background is calculated to output either white or black text for optimal accessibility (unless a specific text color is forced).
 
 ---
 
