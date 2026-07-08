@@ -30,7 +30,7 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "fn-ui-avatars": "^1.0.5"
+    "fn-ui-avatars": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
