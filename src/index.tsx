@@ -12,12 +12,13 @@ export const Avatar: React.FC<AvatarProps> = ({
 	length,
 	rounded,
 	color,
+    palette,
 	format,
 	baseUrl,
 	alt,
 	...rest
 }) => {
-    const rawOptions = { size, fontSize, length, rounded, color, format, baseUrl };
+    const rawOptions = { size, fontSize, length, rounded, color, palette, format, baseUrl };
 
     const cleanOptions = Object.fromEntries(
         Object.entries(rawOptions).filter(([_, value]) => value !== undefined)
